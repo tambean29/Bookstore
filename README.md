@@ -5,5 +5,5 @@ home.html
 
 ![image](https://github.com/user-attachments/assets/500f1bc2-fad1-4ad0-97a0-09572b3e2b84)
 cart.html
-![Demo.mp4](bookstore/demo.mp4)
+![Demo.mp4](./demo.mp4)
 
