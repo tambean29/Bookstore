@@ -1,0 +1,23 @@
+<DOCTYPE html encoding="utf-8">
+<html lang = "en-us">
+<head>
+    <title>Bookstore Home</title>
+</head>
+<body>
+    <h1>Welcome to the Bookstore</h1>
+    <p>Explore our collection of books.</p>
+    <ul>
+        {%for book in books%}
+            <li>{{ book.bookname}}<br>by {{ book.author }}<br>price - {{book.price}}</li>
+            
+            <form method="POST" action = "{%url 'add_to_cart'%}">
+                {% csrf_token %}
+                <input type="hidden" name="book_id" value="{{ book.id }}">
+                <button type="submit">Add to Cart</button>
+            </form>
+            {%if message%}
+                <p>{{ message }}</p>
+            {%endif%}
+        {%endfor%}
+    </ul>
+</html>
